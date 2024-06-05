@@ -11,8 +11,9 @@ Des weiteren soll eine "Direct Method" am IoTHub eingerichtet werden, die eine N
 Für die Erzeugung der Applikation ist der Download der folgenden Libraries notwendig (Folgen Sie den Instruktionen auf den entsprechenden Github Seiten):
 
 * rapidjson
-  git clone https://github.com/Tencent/rapidjson
-  Header only Library - daher ist der Clone ausreichend
+  * git clone https://github.com/Tencent/rapidjson
+  * git submodule update --init
+  * Header only Library - daher ist der Clone ausreichend
 
 * azure-iot-sdk-c
   * git clone https://github.com/Azure/azure-iot-sdk-c.git
@@ -24,11 +25,16 @@ Für die Erzeugung der Applikation ist der Download der folgenden Libraries notw
   * make ..
   * cmake --build .
 
-## Download des Projekt und im Visual Studio 2022 anzeigen
+## Download des Projekts und im Visual Studio 2022 anzeigen
 Klonen des Projekts mit 'cmd' oder 'Git Bash' mit 
 git clone https://github.com/jleixneri/IoT_Edge_SW.git
 
-Öffnen des Visual Studios und 'Öffnen eines lokalen Ordners' anklicken. Ordner in dem der Klone geladen wurde öffnen. Default Config ist x64 Debug. 
+Öffnen des Visual Studios und 'Öffnen eines lokalen Ordners' anklicken. Ordner in dem der Klone geladen wurde öffnen. Default Config ist x64 Debug.
+Eventuell müssen die Pfade der beiden Libraries im File CMakeLists.txt angepasst werden. 
+
+* set (AZURE_IOT_SDK_C_DIR "C:/Users/jleix/source/repos/Library/azure-iot-sdk-c")
+* set(RAPID_JSON_ROOT "C:/Users/jleix/source/repos/Library/rapidjson")
+
 Erzeugen der Applikation durch Build All.
 
 
