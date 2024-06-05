@@ -12,6 +12,7 @@ Für die Erzeugung der Applikation ist der Download der folgenden Libraries notw
 
 * rapidjson
   * git clone https://github.com/Tencent/rapidjson
+  * cd rapidjson
   * git submodule update --init
   * Header only Library - daher ist der Clone ausreichend
 
@@ -24,19 +25,33 @@ Für die Erzeugung der Applikation ist der Download der folgenden Libraries notw
   * cd cmake
   * make ..
   * cmake --build .
+ 
+## Einrichten eines IoTHubs in Azure
+Am Azure Poral muss ein IoTHub erzeugt werden. Dazu sind folgende Schritte erforderlich:
+* Öffnen des Azure Portals
+* Zum Erzeugen eines IoT Hubs und eines Gerätes folgen Sie den Schritten in https://learn.microsoft.com/de-de/azure/iot-hub/iot-hub-create-through-portal
+* Richten Sie eine 'Direkte Methode' mit dem Namen 'Test' und einem entsprechenden Payload ein (JSON!!) 
 
 ## Download des Projekts und im Visual Studio 2022 anzeigen
 Klonen des Projekts mit 'cmd' oder 'Git Bash' mit 
 git clone https://github.com/jleixneri/IoT_Edge_SW.git
 
-Öffnen des Visual Studios und 'Öffnen eines lokalen Ordners' anklicken. Ordner in dem der Klone geladen wurde öffnen. Default Config ist x64 Debug.
-Eventuell müssen die Pfade der beiden Libraries im File CMakeLists.txt angepasst werden. 
+Öffnen des Visual Studios und 'Öffnen eines lokalen Ordners' anklicken. Ordner in dem der Klone geladen wurde öffnen. 
+Default Config ist x64 Debug.
 
+Die Pfade der beiden Libraries im File CMakeLists.txt müssen angepasst werden:
 * set (AZURE_IOT_SDK_C_DIR "C:/Users/jleix/source/repos/Library/azure-iot-sdk-c")
-* set(RAPID_JSON_ROOT "C:/Users/jleix/source/repos/Library/rapidjson")
+* set (RAPID_JSON_ROOT "C:/Users/jleix/source/repos/Library/rapidjson")
+
+Anpassen des Connection Strings in AzureIoTHubClient.cpp
+* In der Azure Plattform finden Sie auf der Geräte Seite den Eintrag 'Primäre Verbindungszeichenfolge'. Kopieren Sie diesen in den
+  static const char* connectionString = [ your connection string];
 
 Erzeugen der Applikation durch Build All.
 
+
+## Weitere Anmerkungen
+Eine volle Dokumentation finden Sie im File 'ReadMe.pdf'
 
 
 
