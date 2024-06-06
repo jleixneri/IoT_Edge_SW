@@ -41,9 +41,7 @@ std::string doc2Str(rapidjson::Document& doc) {
     rapidjson::Writer<rapidjson::StringBuffer> writer(strbuf);
     doc.Accept(writer);
 
-    std::string docString = strbuf.GetString();
-
-    return docString;
+    return strbuf.GetString(); 
 }
 
 // method to create rapidjson document (input) from json file
