@@ -51,7 +51,7 @@ Erzeugen der Applikation durch Build All.
 
 
 ## Weitere Anmerkungen
-Eine volle Dokumentation finden Sie im File 'ReadMe.pdf'
+Eine volle Dokumentation finden Sie im File 'HowToDo.pdf'
 
 
 
