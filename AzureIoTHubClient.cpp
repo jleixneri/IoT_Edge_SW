@@ -25,6 +25,7 @@
 // Azure IotHub connection String
 static const char* connectionString = "HostName=IotHub01.azure-devices.net;DeviceId=Device001;SharedAccessKey=PxORMzHDzAtbQFE0+YkJ4LuHW2CgDTuq0AIoTNXX5C8=";
 
+// Input file name
 static std::string file = "C:/Users/jleix/source/repos/IoT_Edge_SW/Data/Input.json";
 
 // Flags to check callback methods met 
