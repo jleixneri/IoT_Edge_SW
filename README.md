@@ -50,6 +50,18 @@ Anpassen des Connection Strings in AzureIoTHubClient.cpp
 Erzeugen der Applikation durch Build All.
 
 
+## Tests
+Vorbereitungen:
+* Azure Plattform öffnen
+* Cloud Shell öffnen und 
+	* az extension add --name azure-iot
+	* az iot hub monitor-events --hub-name IotHub01
+	
+Wenn die Applikation gestartet wird sollte die von der Applikation gesendete Nachricht auf der Shell angezeigt werden.
+
+Abschließend die eingereichtete 'Direkte Methode' mit 'Methode aufrufen' aufrufen.
+
+
 ## Weitere Anmerkungen
 Eine volle Dokumentation finden Sie im File 'HowToDo.pdf'
 
